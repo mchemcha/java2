@@ -3,6 +3,7 @@ public class Produit {
     private int code;
     String marque;
     private float prix;
+    public Object setCode;
 
     public Produit(){
         code = 0;
