@@ -1,7 +1,30 @@
 // Exercice 2:
-// • Ecrire une procédure qui affiche tous les éléments d'un tableau pass é en paramètre
-// • Dans la fonction principale (main), et à l'aide de la procédure afficher les valeurs du tableau. 
-// La taille et les valeurs du tableau sont saisies par l'utilisateur.
+
+import java.util.Scanner;
+
 public class Exercice2 {
-    
+
+    public static void afficher_tableux(int[] array){
+        int i ;
+        for(i = 0; i < array.length; i++ ){
+            System.out.println("element" + i + "=" + array[i]);
+        }
+    }
+    public static void main(String[] args){
+        @SuppressWarnings("resource")
+        Scanner scanner = new Scanner(System.in);
+        int nbr;
+        int elem;
+        int i;
+        System.out.print("entre les nbr = ");
+        nbr = scanner.nextInt();
+        int[] array = new int[nbr];
+        for (i = 0; i < nbr;i++){
+            System.out.print("entre les element de tableux = ");
+            elem = scanner.nextInt();
+            array[i] = elem;
+        }
+        afficher_tableux(array);
+        scanner.close();
+    }
 }
