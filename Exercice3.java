@@ -4,7 +4,7 @@ public class Exercice3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Produit[] produits = new Produit[4];
+        Produit[] produits = new Produit[2];
 
         for (int i = 0; i < produits.length; i++) {
             System.out.println("Saisie des informations pour le produit " + (i + 1) + ":");

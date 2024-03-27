@@ -3,7 +3,6 @@ public class Produit {
     private int code;
     String marque;
     private float prix;
-    public Object setCode;
 
     public Produit(){
         code = 0;
@@ -38,13 +37,11 @@ public class Produit {
         }
         return somme;
     }
-    // public boolean equals(Object obj) {
-    //     if (this == obj) return true;
-    //     if (obj == null || getClass() != obj.getClass()) return false;
-    //     Produit produit = (Produit) obj;
-    //     return code == produit.code &&
-    //             Double.compare(produit.prix, prix) == 0 &&
-    //             marque.equals(produit.marque);
-    // }
+    public boolean equals(Object obj) {
+        Produit produit = (Produit) obj;
+        return code == produit.code &&
+                Double.compare(produit.prix, prix) == 0 &&
+                marque.equals(produit.marque);
+    }
      
 }
